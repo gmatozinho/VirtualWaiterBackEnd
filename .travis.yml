@@ -5,9 +5,8 @@ dist: trusty
 sudo: required
 
 before_script:
-  - npm i -g @angular/cli
+
 script:
-  - ng lint
 
 deploy:
       - provider: codedeploy
