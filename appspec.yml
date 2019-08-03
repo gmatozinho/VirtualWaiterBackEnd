@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/VirtualWaiterBackEnd
+hooks:
+  AfterInstall:
+    - location: post_install.sh
+      timeout: 600
+      runas: root
+  #ApplicationStart:
+    #- location: run.sh
+     # timeout: 120
+     # runas: root
