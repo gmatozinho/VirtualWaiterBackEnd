@@ -56,6 +56,7 @@ createConnection().then(async connection => {
         'http://localhost:4200',
         'http://localhost:8100',
         'http://localhost',
+        'http://virtualwaiterbucket.s3-website-sa-east-1.amazonaws.com',
         'http://ec2-18-231-198-246.sa-east-1.compute.amazonaws.com'];
 
     app.use(cors({
