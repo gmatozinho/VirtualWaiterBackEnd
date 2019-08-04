@@ -61,3 +61,7 @@ export let del = async (request: Request, response: Response) => {
         response.end(err.message)
     }
 };
+
+export let comandaEstabelecimento = async (request: Request, response: Response) => {
+    await ComandaService.getComandaEstabelecimento(request, response);
+};

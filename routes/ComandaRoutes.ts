@@ -34,12 +34,20 @@ const comandaDelete = {
     path: "/api/comanda",
 }
 
+const comandaEstabelecimento = {
+    action: ComandaApplication.comandaEstabelecimento,
+    method: 'get',
+    path: '/api/comanda/comandaEstabelecimento',
+}
+
 const ComandaRoutes = [
+    comandaEstabelecimento,
     comandaGet,
     comandaGetById,
     comandaPost,
     comandaPut,
-    comandaDelete]
+    comandaDelete
+]
 
 /**
  * Fim das Rotas do Comanda
