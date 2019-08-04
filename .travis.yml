@@ -13,8 +13,8 @@ deploy:
         revision_type: github
         access_key_id: AKIAIZDCWAXTXNJ7VIKQ
         secret_access_key: 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
-        application: "Virtual-Waiter"
-        deployment_group: "Virtual-Waiter-Production"
+        application: "VirtualWaiterApi"
+        deployment_group: "Api"
         region: "sa-east-1"
         on:
           branch: master
