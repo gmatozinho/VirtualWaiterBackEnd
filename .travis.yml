@@ -13,7 +13,7 @@ deploy:
         revision_type: github
         access_key_id: AKIAIZDCWAXTXNJ7VIKQ
         secret_access_key: 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
-        application: "VirtualWaiterBackEnd"
+        application: "VirtualWaiter"
         deployment_group: "BackEnd"
         region: "sa-east-1"
         on:
