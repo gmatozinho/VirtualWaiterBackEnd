@@ -41,12 +41,13 @@ const secaoRecomendada = {
 }
 
 const SecaoRoutes = [
+    secaoRecomendada,
     secaoGet,
     secaoGetById,
     secaoPost,
     secaoPut,
-    secaoDelete,
-    secaoRecomendada]
+    secaoDelete
+    ]
 
 /**
  * Fim das Rotas do Secao
