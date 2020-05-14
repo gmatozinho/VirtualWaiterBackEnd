@@ -5,7 +5,8 @@
   "scripts": {
     "transcribe": "tsc",
     "node": "node ./build/app.js",
-    "start": "npm run transcribe && npm run node"
+    "start": "npm run transcribe && npm run node",
+    "start-serverless": "serverless offline start"
   },
   "engine": "node >=10.15.x",
   "private": true,
@@ -23,6 +24,9 @@
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "pg": "^7.11.0",
+    "serverless-http": "^2.4.1",
+    "serverless-offline": "^6.1.5",
+    "serverless-plugin-typescript-express": "^1.0.8",
     "tslib": "^1.9.0",
     "typeorm": "^0.2.17",
     "typeorm-express-query-builder": "^1.1.3",
@@ -33,8 +37,9 @@
     "@types/debug": "^4.1.4",
     "@types/morgan": "^1.7.35",
     "@types/node": "~8.9.4",
+    "serverless-plugin-typescript": "^1.1.9",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "3.1.6"
+    "typescript": "^3.1.6"
   }
 }

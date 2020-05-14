@@ -162,3 +162,5 @@ function onListening(): void {
         : 'port ' + addr.port;
     debug('Listening on ' + bind);
 }
+
+export default app;
