@@ -5,16 +5,19 @@ plugins: # List of plugins of use on application
 # serverless.yml
 
 service: virtualwaiterbackend
+app: virtualwaite
 
 provider:
   name: aws
-  runtime: nodejs6.10
-  stage: dev
+  runtime: nodejs10.x
+  stage: ${opt:stage, 'dev'}
   region: us-east-1
+  apiName: ServerlessRestApi
 
 functions:
   app:
     handler: server.handler
+    timeout: 2
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'

@@ -4,10 +4,12 @@
   "description": "Back End for our restaurant solution - Virtual Waiter ",
   "scripts": {
     "transcribe": "tsc",
-    "node": "node ./build/app.js",
+    "node": "node ./build/server.local.js",
     "start": "npm run transcribe && npm run node",
-    "start-serverless": "serverless offline start"
+    "start-serverless": "serverless offline start",
+    "debug": "SET SLS_DEBUG=* && node --inspect %USERPROFILE%\\AppData\\Roaming\\npm\\node_modules\\serverless\\bin\\serverless offline -s dev"
   },
+  "main": "server.js",
   "engine": "node >=10.15.x",
   "private": true,
   "dependencies": {
@@ -25,7 +27,6 @@
     "morgan": "~1.9.0",
     "pg": "^7.11.0",
     "serverless-http": "^2.4.1",
-    "serverless-offline": "^6.1.5",
     "serverless-plugin-typescript-express": "^1.0.8",
     "tslib": "^1.9.0",
     "typeorm": "^0.2.17",
@@ -37,6 +38,7 @@
     "@types/debug": "^4.1.4",
     "@types/morgan": "^1.7.35",
     "@types/node": "~8.9.4",
+    "serverless-offline": "^6.1.5",
     "serverless-plugin-typescript": "^1.1.9",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
