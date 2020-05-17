@@ -7,22 +7,6 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug Serverless",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run",
-                "debug"
-            ],
-            "outFiles": [
-                "${workspaceFolder}/build//server.js"
-            ],
-            "port": 9229,
-            "sourceMaps": true
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Run Node",
             "program": "${workspaceFolder}\\server.local.ts",
             "preLaunchTask": "tsc: build - tsconfig.json",
