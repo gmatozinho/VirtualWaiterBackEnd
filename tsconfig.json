@@ -1,9 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "rootDir": "./",
     "baseUrl": "./",
     "outDir": "./build",
     "sourceMap": true,
+    "allowJs": true,
     "declaration": false,
     "module": "commonjs",
     "moduleResolution": "node",
@@ -11,7 +13,8 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es5",
+    "target": "es2017",
+    "pretty": true,
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -24,6 +27,7 @@
   },
   "exclude": [
     "node_modules",
-    "public",
+    "test",
+    "scripts"
   ]
 }

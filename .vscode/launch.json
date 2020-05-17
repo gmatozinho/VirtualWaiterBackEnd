@@ -5,21 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run Angular",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:4200",
-            "webRoot": "${workspaceRoot}",
-            "sourceMapPathOverrides": {
-                "webRoot": "${workspaceRoot}",
-                "webpack:/*": "${workspaceRoot}/*"
-            }
-        },
-        {
             "type": "node",
             "request": "launch",
             "name": "Run Node",
-            "program": "${workspaceFolder}\\build\\app.js"
+            "program": "${workspaceFolder}\\server.local.ts",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/build/**/*.js"
+            ]
         }
     ]
 }
