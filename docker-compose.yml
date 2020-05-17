@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=virtualwaiter
+      - POSTGRES_PASSWORD=xwh1234
+      - POSTGRES_DB=virtualwaiter
+    ports:
+      - 5432:5432

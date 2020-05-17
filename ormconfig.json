@@ -1,11 +1,11 @@
 {
-  "_comment": "waiterdb.clcxba6llmax.sa-east-1.rds.amazonaws.com",
+  "_comment": "virtual waiter db",
   "type": "postgres",
-  "host": "waiterdb.clcxba6llmax.sa-east-1.rds.amazonaws.com",
+  "host": "localhost",
   "port": 5432,
-  "username": "waiter",
-  "password": "538CFwMphL6vXeu",
-  "database": "virtualwaiterdb",
+  "username": "virtualwaiter",
+  "password": "xwh1234",
+  "database": "virtualwaiter",
   "entities": [
     "./build/entity/*{.js,.ts}"
   ],
