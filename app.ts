@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { AppRoutes } from './routes/index.js';
-
+import options from './ormconfig'
 import cookieParser = require('cookie-parser');
 import logger = require('morgan');
 import cors = require('cors');
@@ -12,7 +12,7 @@ const invalidindex = -1;
 
 // create express app
 const app = express();
-
+  
 // create connection with database
 // note that it's not active database connection
 // TypeORM creates connection pools and uses them for your requests
@@ -34,7 +34,7 @@ createConnection().then(async connection => {
         if (req.url.indexOf('/api') === invalidindex) {
             res.sendFile(path.join(__dirname, '../public', 'index.html'));
         } else { */
-            return next();
+        return next();
         /* } */
     });
 

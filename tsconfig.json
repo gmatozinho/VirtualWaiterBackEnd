@@ -5,7 +5,6 @@
     "baseUrl": "./",
     "outDir": "./build",
     "sourceMap": true,
-    "allowJs": true,
     "declaration": false,
     "module": "commonjs",
     "moduleResolution": "node",

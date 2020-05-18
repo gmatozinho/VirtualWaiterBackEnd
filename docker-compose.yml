@@ -1,10 +1,37 @@
-version: '2.1'
+version: "3"
 services:
   postgres:
+    container_name: postgres
     image: postgres:9.6
+    volumes:
+      - postgres-data:/data
     environment:
-      - POSTGRES_USER=virtualwaiter
-      - POSTGRES_PASSWORD=xwh1234
-      - POSTGRES_DB=virtualwaiter
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    networks:
+      - app-connect
     ports:
-      - 5432:5432
+      - "5432:5432"
+
+  nodejs:
+    container_name: nodejs
+    build: "."
+    volumes:
+      - .:/home/node/api
+      - /home/node/api/node_modules
+
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+    networks:
+      - app-connect
+    ports:
+      - "3000:3000"
+volumes:
+  postgres-data:
+
+networks:
+  app-connect:
+    driver: bridge
