@@ -1,13 +1,11 @@
 {
-  "name": "virtualwaiterback",
+  "name": "virtualwaiterapi",
   "version": "0.0.0",
   "description": "Back End for our restaurant solution - Virtual Waiter ",
   "scripts": {
     "transcribe": "tsc",
     "node": "node ./build/server.local.js",
-    "start": "npm run transcribe && npm run node",
-    "start-serverless": "serverless offline start",
-    "debug": "SET SLS_DEBUG=* && node --inspect %USERPROFILE%\\AppData\\Roaming\\npm\\node_modules\\serverless\\bin\\serverless offline -s dev"
+    "start": "npm run transcribe && npm run node"
   },
   "main": "server.js",
   "engine": "node >=10.15.x",
