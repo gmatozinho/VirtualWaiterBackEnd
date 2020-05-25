@@ -40,10 +40,8 @@ createConnection().then(async connection => {
 
     const allowedOrigins = ['http://localhost:3000',
         'http://localhost:4200',
-        'http://localhost:8100',
         'http://localhost',
-        'http://virtualwaiterbucket.s3-website-sa-east-1.amazonaws.com',
-        'http://ec2-18-231-198-246.sa-east-1.compute.amazonaws.com'];
+        'https://virtual-waiter-c6d42.web.app'];
 
     app.use(cors({
         origin: (origin, callback) => {
