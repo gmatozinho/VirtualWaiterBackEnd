@@ -12,5 +12,6 @@ docker-compose up
 heroku container:login
 heroku create virtualwaiterapi
 heroku git:remote -a virtualwaiterapi
-heroku container:push virtualwaiterapi
-heroku container:release virtualwaiterapi
+heroku container:push web -a virtualwaiterapi
+heroku container:release web -a virtualwaiterapi
+heroku ps:scale web=1
