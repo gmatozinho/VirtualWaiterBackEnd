@@ -1,14 +1,22 @@
 # VirtualWaiterBackEnd
-Repository for virtual waiter back end in node.js
 
-## Docker
-docker build -t virtualwaiterapi .
-docker tag virtualwaiterapi registry.heroku.com/virtualwaiter/api   
+Repository for VirtualWaiter back end in node.js
 
-## Up docker compose
+## Up docker compose to local test
+
 docker-compose up
 
-## Heroku 
+localhost:3000
+
+## Publish
+
+### Docker
+
+docker build -t virtualwaiterapi .
+docker tag virtualwaiterapi registry.heroku.com/virtualwaiter/api
+
+### Heroku
+
 heroku container:login
 heroku create virtualwaiterapi
 heroku git:remote -a virtualwaiterapi
