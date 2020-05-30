@@ -3,7 +3,6 @@ import { Request, Response } from 'express';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { AppRoutes } from './routes/index.js';
-
 import cookieParser = require('cookie-parser');
 import logger = require('morgan');
 import cors = require('cors');
@@ -34,16 +33,13 @@ createConnection().then(async connection => {
         if (req.url.indexOf('/api') === invalidindex) {
             res.sendFile(path.join(__dirname, '../public', 'index.html'));
         } else { */
-            return next();
+        return next();
         /* } */
     });
 
-    const allowedOrigins = ['http://localhost:3000',
+    const allowedOrigins = [
         'http://localhost:4200',
-        'http://localhost:8100',
-        'http://localhost',
-        'http://virtualwaiterbucket.s3-website-sa-east-1.amazonaws.com',
-        'http://ec2-18-231-198-246.sa-east-1.compute.amazonaws.com'];
+        'https://virtual-waiter-c6d42.web.app'];
 
     app.use(cors({
         origin: (origin, callback) => {

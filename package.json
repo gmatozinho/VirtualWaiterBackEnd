@@ -1,13 +1,11 @@
 {
-  "name": "virtualwaiterback",
+  "name": "virtualwaiterapi",
   "version": "0.0.0",
   "description": "Back End for our restaurant solution - Virtual Waiter ",
   "scripts": {
     "transcribe": "tsc",
     "node": "node ./build/server.local.js",
-    "start": "npm run transcribe && npm run node",
-    "start-serverless": "serverless offline start",
-    "debug": "SET SLS_DEBUG=* && node --inspect %USERPROFILE%\\AppData\\Roaming\\npm\\node_modules\\serverless\\bin\\serverless offline -s dev"
+    "start": "npm run transcribe && npm run node"
   },
   "main": "server.js",
   "engine": "node >=10.15.x",
@@ -20,6 +18,7 @@
     "core-js": "^2.6.6",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "express": "~4.16.0",
     "firebase": "^6.0.2",
     "font-awesome": "^4.7.0",
@@ -36,6 +35,7 @@
     "@types/debug": "^4.1.4",
     "@types/morgan": "^1.7.35",
     "@types/node": "~8.9.4",
+    "@types/dotenv": "^6.1.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^3.1.6"
